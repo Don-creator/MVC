@@ -27,6 +27,8 @@ namespace McBonaldsMVC.Repositories
         public List<Pedido> ObterTodosPorCliente(string emailCliente)
         {
             var pedidos = ObterTodos();
+            List<Pedido> pedidoCliente = new List<Pedido>();
+            
             foreach (var pedido in pedidos)
             {
                 if (pedidos.Cliente.Email.Equals(emailCliente))

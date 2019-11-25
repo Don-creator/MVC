@@ -69,3 +69,11 @@ C:\Users\44337427830\Desktop\Exercicios\MCBonaldsMVC\obj\Debug\netcoreapp2.2\McB
 C:\Users\44337427830\Desktop\Exercicios\MCBonaldsMVC\obj\Debug\netcoreapp2.2\McBonaldsMVC.dll
 C:\Users\44337427830\Desktop\Exercicios\MCBonaldsMVC\obj\Debug\netcoreapp2.2\McBonaldsMVC.pdb
 C:\Users\44337427830\Desktop\Exercicios\MCBonaldsMVC\obj\Debug\netcoreapp2.2\McBonaldsMVC.csproj.CopyComplete
+C:\Users\44337427830\Desktop\MVC\MCBonaldsMVC\obj\Debug\netcoreapp2.2\MCBonaldsMVC.csprojAssemblyReference.cache
+C:\Users\44337427830\Desktop\MVC\MCBonaldsMVC\obj\Debug\netcoreapp2.2\MCBonaldsMVC.csproj.CoreCompileInputs.cache
+C:\Users\44337427830\Desktop\MVC\MCBonaldsMVC\obj\Debug\netcoreapp2.2\MCBonaldsMVC.RazorAssemblyInfo.cache
+C:\Users\44337427830\Desktop\MVC\MCBonaldsMVC\obj\Debug\netcoreapp2.2\MCBonaldsMVC.RazorAssemblyInfo.cs
+C:\Users\44337427830\Desktop\MVC\MCBonaldsMVC\obj\Debug\netcoreapp2.2\MCBonaldsMVC.AssemblyInfoInputs.cache
+C:\Users\44337427830\Desktop\MVC\MCBonaldsMVC\obj\Debug\netcoreapp2.2\MCBonaldsMVC.AssemblyInfo.cs
+C:\Users\44337427830\Desktop\MVC\MCBonaldsMVC\obj\Debug\netcoreapp2.2\MCBonaldsMVC.dll
+C:\Users\44337427830\Desktop\MVC\MCBonaldsMVC\obj\Debug\netcoreapp2.2\MCBonaldsMVC.pdb
