@@ -6,15 +6,15 @@ namespace McBonaldsMVC.Repositories
 {
     public class ShakeRepository
     {
-        private const string PATH = "Database/Hamburguer.csv";
+        private const string PATH = "Database/Shake.csv";
 
         public double ObterPrecoDe(string nomeShake)
         {
             var lista = ObterTodos();
-            var preco = 0.0;
+            double preco = 0.0;
             foreach (var item in lista)
             {
-                if (item.Nome.Equals(nomeShake))
+                if(item.Nome.Equals(nomeShake))
                 {
                     preco = item.Preco;
                     break;
@@ -27,16 +27,17 @@ namespace McBonaldsMVC.Repositories
         {
             List<Shake> shakes = new List<Shake>();
 
-            string[] linhas = File.ReadAllLines(PATH);
+            var linhas = File.ReadAllLines(PATH);
+            
             foreach (var linha in linhas)
             {
                 Shake s = new Shake();
-                var dados = linha.Split(";");
+                string[] dados =linha.Split(";");
                 s.Nome = dados[0];
                 s.Preco = double.Parse(dados[1]);
+
                 shakes.Add(s);
             }
-
             return shakes;
         }
     }

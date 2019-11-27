@@ -1,7 +1,7 @@
+using System;
 using System.Collections.Generic;
 using System.IO;
 using McBonaldsMVC.Models;
-using MCBonaldsMVC.Repositories;
 
 namespace McBonaldsMVC.Repositories
 {
@@ -31,12 +31,12 @@ namespace McBonaldsMVC.Repositories
             
             foreach (var pedido in pedidos)
             {
-                if (pedidos.Cliente.Email.Equals(emailCliente))
+                if (pedido.Cliente.Email.Equals(emailCliente))
                 {
-                    pedidosCliente.Add(pedido);
+                    pedidoCliente.Add(pedido);
                 }
             }
-            return pedidosCliente;
+            return pedidoCliente;
         }
         
 
@@ -63,7 +63,7 @@ namespace McBonaldsMVC.Repositories
             return pedidos;
         }
 
-        private string ExtrairValorDoCampo(string nomeCampo, string linha)
+        private new string ExtrairValorDoCampo(string nomeCampo, string linha)
         {
             var chave = nomeCampo;
             var indiceChave = linha.IndexOf(chave);

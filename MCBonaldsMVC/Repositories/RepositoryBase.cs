@@ -1,4 +1,4 @@
-namespace MCBonaldsMVC.Repositories
+namespace McBonaldsMVC.Repositories
 {
     public class RepositoryBase
     {
@@ -8,10 +8,9 @@ namespace MCBonaldsMVC.Repositories
             var indiceChave = linha.IndexOf(chave);
 
             var indiceTerminal = linha.IndexOf(";", indiceChave);
-
             var valor = "";
 
-            if (indiceTerminal != -1)
+            if(indiceTerminal != -1)
             {
                 valor = linha.Substring(indiceChave, indiceTerminal - indiceChave);
             }
@@ -19,8 +18,9 @@ namespace MCBonaldsMVC.Repositories
             {
                 valor = linha.Substring(indiceChave);
             }
-            System.Console.WriteLine($"Campo {nomeCampo} e valor {valor}");
-            return valor.Replace(nomeCampo + "=", " ");
+
+            System.Console.WriteLine($"Campo {nomeCampo} tem valor {valor}");
+            return valor.Replace(nomeCampo + "=", "");
         }
     }
 }

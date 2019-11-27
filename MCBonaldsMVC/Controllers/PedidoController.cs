@@ -5,55 +5,59 @@ using McBonaldsMVC.ViewModels;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace McBonaldsMVC.Controllers {
-    public class PedidoController : Controller {
-        PedidoRepository pedidoRepository = new PedidoRepository ();
+namespace McBonaldsMVC.Controllers
+{
+    public class PedidoController : AbstractController
+    {
+        ClienteRepository clienteRepository = new ClienteRepository();
+        PedidoRepository pedidoRepository = new PedidoRepository();
         HamburguerRepository hamburguerRepository = new HamburguerRepository();
         ShakeRepository shakeRepository = new ShakeRepository();
+        public IActionResult Index()
+        {
+            var hamburgueres = hamburguerRepository.ObterTodos();
+            var shakes = shakeRepository.ObterTodos();
 
-        public IActionResult Index () {
+            PedidoViewModel pedido = new PedidoViewModel();
+            pedido.Hamburgueres = hamburgueres;
+            pedido.Shakes = shakes;
 
-            PedidoViewModel pvm = new PedidoViewModel();
-            pvm.Hamburgueres = hamburguerRepository.ObterTodos();
-            pvm.Shake = shakeRepository.ObterTodos();
-
-
-            pvm.NomeView = "Pedido";
-            pvm.UsuarioEmail = ObterUsuarioSession();
-            pvm.UsuarioNome = ObterUsuarioNomeSession();
-            var clienteLogado = ClienteRepository.ObterPor(NomeUsuarioLogado);
-            if (Cliente != null)
+            var emailCliente = ObterUsuarioSession();
+            if(!string.IsNullOrEmpty(emailCliente))
             {
-                pvm.NomeUsuario = NomeUsuarioLogado;
-            }
-            var ClienteLogado = ClienteRepository.ObterPor(usuarioLogado);
-            if (Cliente != null)
-            {
-                pvm.Cliente = clienteLogado;
+                pedido.Cliente = clienteRepository.ObterPor(emailCliente);
             }
 
-            return View (pvm);
+            var nomeUsuario = ObterUsuarioNomeSession();
+            if(!string.IsNullOrEmpty(nomeUsuario))
+            {
+                pedido.NomeCliente = nomeUsuario;
+            }
+            
+            return View(pedido);
         }
 
-        public IActionResult Registrar (IFormCollection form) {
+        public IActionResult Registrar(IFormCollection form)
+        {
             ViewData["Action"] = "Pedido";
-            Pedido pedido = new Pedido ();
-
-            Shake shake = new Shake ();
-            shake.Nome = form["shake"];
-            shake.Preco = 0.0;
+            Pedido pedido = new Pedido();
+            
+            Shake shake = new Shake();
+            var nomeShake = form["shake"];
+            shake.Nome = nomeShake;
+            shake.Preco = shakeRepository.ObterPrecoDe(nomeShake);
 
             pedido.Shake = shake;
 
-            var nomeHambuguer = form["hamburguer"];
-            Hamburguer hamburguer = new Hamburguer (hamburguerRepository.ObterPrecoDe(nomeHambuguer));
-
-            var nomeShake = form["shake"];
-            Shake shakes = new Shake (shakeRepository.ObterPrecoDe(nomeShake));
+            var nomeHamburguer = form["hamburguer"];
+            Hamburguer hamburguer = new Hamburguer(
+                nomeHamburguer, 
+                hamburguerRepository.ObterPrecoDe(nomeHamburguer));
 
             pedido.Hamburguer = hamburguer;
 
-            Cliente cliente = new Cliente () {
+            Cliente cliente = new Cliente()
+            {
                 Nome = form["nome"],
                 Endereco = form["endereco"],
                 Telefone = form["telefone"],
@@ -63,13 +67,19 @@ namespace McBonaldsMVC.Controllers {
             pedido.Cliente = cliente;
 
             pedido.DataDoPedido = DateTime.Now;
-
+            
             pedido.PrecoTotal = hamburguer.Preco + shake.Preco;
 
-            if (pedidoRepository.Inserir (pedido)) {
-                return View ("Sucesso");
+            if(pedidoRepository.Inserir(pedido))
+            {
+                return View("Sucesso", new RespostaViewModel()
+                {
+                    NomeView = "Pedido",
+                    UsuarioEmail = ObterUsuarioSession(),
+                    UsuarioNome = ObterUsuarioNomeSession()
+                });
             } else {
-                return View ("Erro");
+                return View ("Erro", new RespostaViewModel("Mensagem"));
             }
         }
     }

@@ -1,11 +1,11 @@
 using System.Collections.Generic;
 using McBonaldsMVC.Models;
+using MCBonaldsMVC.ViewModels;
 
-namespace MCBonaldsMVC.ViewModels
+namespace McBonaldsMVC.ViewModels
 {
-    public class HistoricoViewModel
+    public class HistoricoViewModel : BaseViewModel
     {
-        public List<Pedido> Pedido {get;set;}
-
+        public List<Pedido> Pedidos {get;set;}
     }
 }

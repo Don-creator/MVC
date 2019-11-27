@@ -12083,9 +12083,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\44337427830\\Desktop\\MVC\\MCBonaldsMVC\\MCBonaldsMVC.csproj",
-      "projectName": "MCBonaldsMVC",
-      "projectPath": "C:\\Users\\44337427830\\Desktop\\MVC\\MCBonaldsMVC\\MCBonaldsMVC.csproj",
+      "projectUniqueName": "C:\\Users\\44337427830\\Desktop\\MVC\\MCBonaldsMVC\\McBonaldsMVC.csproj",
+      "projectName": "McBonaldsMVC",
+      "projectPath": "C:\\Users\\44337427830\\Desktop\\MVC\\MCBonaldsMVC\\McBonaldsMVC.csproj",
       "packagesPath": "C:\\Users\\44337427830\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\44337427830\\Desktop\\MVC\\MCBonaldsMVC\\obj\\",
       "projectStyle": "PackageReference",

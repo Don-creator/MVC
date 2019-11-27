@@ -1,15 +1,14 @@
 using System;
 using McBonaldsMVC.Repositories;
-using MCBonaldsMVC.Repositories;
+using McBonaldsMVC.ViewModels;
 using MCBonaldsMVC.ViewModels;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace McBonaldsMVC.Controllers
 {
-    public class ClienteController : RepositoryBase
+    public class ClienteController : AbstractController
     {
-        private const string SESSION_CLIENTE_EMAIL = "cliente_email";
         private ClienteRepository clienteRepository = new ClienteRepository();
         private PedidoRepository pedidoRepository = new PedidoRepository();
 
@@ -19,10 +18,9 @@ namespace McBonaldsMVC.Controllers
             return View(new BaseViewModel()
             {
                 NomeView = "Login",
-                UsuarioEmail = ObterUsuarioNomeSession(),
-                UsuarioNome = ObterUsuarioNomeSession(),
+                UsuarioEmail = ObterUsuarioSession(),
+                UsuarioNome = ObterUsuarioNomeSession()
             });
-            
         }
 
         [HttpPost]
@@ -31,51 +29,62 @@ namespace McBonaldsMVC.Controllers
             ViewData["Action"] = "Login";
             try
             {
-                System.Console.WriteLine("==================");
+                System.Console.WriteLine("====================");
                 System.Console.WriteLine(form["email"]);
                 System.Console.WriteLine(form["senha"]);
-                System.Console.WriteLine("==================");
+                System.Console.WriteLine("====================");
 
                 var usuario = form["email"];
                 var senha = form["senha"];
 
                 var cliente = clienteRepository.ObterPor(usuario);
-
+                
                 if (cliente != null)
-                {   
-                    HttpContext.Session.SetString("SESSION_CLIENTE_EMAIL", usuario);
-                    if (cliente.Senha.Equals(senha))
+                {
+                    if(cliente.Senha.Equals(senha))
                     {
-                        return RedirectToAction("Historico","Cliente");
+                        HttpContext.Session.SetString(SESSION_CLIENTE_EMAIL, usuario);
+                        HttpContext.Session.SetString(SESSION_CLIENTE_NOME, cliente.Nome);
+                        return RedirectToAction("Historico", "Cliente");
                     }
-                    else
+                    else 
                     {
                         return View("Erro", new RespostaViewModel("Senha incorreta"));
                     }
                 }
-                else
+                else 
                 {
-                    return View("Erro", new RespostaViewModel($"Usuário {usuario} não encontrado"));
+                    return View("Erro", new RespostaViewModel($"Usuário {usuario} não foi encontrado"));
                 }
-
-                return View("Sucesso");
             }
             catch (Exception e)
             {
+                System.Console.WriteLine("====================");
                 System.Console.WriteLine(e.StackTrace);
+                System.Console.WriteLine("====================");
                 return View("Erro");
             }
         }
-
+    
         public IActionResult Historico()
         {
             var emailCliente = HttpContext.Session.GetString(SESSION_CLIENTE_EMAIL);
-            var pedidosCliente = pedidoRepository.ObterTodosPorCliente(emailCliente);
+            var pedidos = pedidoRepository.ObterTodosPorCliente(emailCliente);
 
-            return View(new HistoricoViewModel()
+            return View(new HistoricoViewModel() 
             {
-                Pedidos = pedidosCliente
+                Pedidos = pedidos,
+                NomeView = "Historico",
+                UsuarioEmail = ObterUsuarioSession(),
+                UsuarioNome = ObterUsuarioNomeSession(),
             });
         }
+        public IActionResult Logoff()
+            {
+                HttpContext.Session.Remove(SESSION_CLIENTE_EMAIL);
+                HttpContext.Session.Remove(SESSION_CLIENTE_NOME);
+                HttpContext.Session.Clear();
+                return RedirectToAction("Index","Home");
+            }
     }
 }

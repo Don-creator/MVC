@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
-using MCBonaldsMVC.ViewModels;
 using Microsoft.AspNetCore.Mvc;
+using McBonaldsMVC.Models;
+using MCBonaldsMVC.ViewModels;
 
 namespace McBonaldsMVC.Controllers
 {
@@ -14,9 +15,9 @@ namespace McBonaldsMVC.Controllers
         {
             return View(new BaseViewModel()
             {
-            NomeView = "Home",
-            UsuarioEmail = ObterUsuarioNomeSession(),
-            UsuarioNome = ObterUsuarioNomeSession(),
+                NomeView = "Home",
+                UsuarioEmail = ObterUsuarioSession(),
+                UsuarioNome = ObterUsuarioNomeSession()
             });
         }
 
