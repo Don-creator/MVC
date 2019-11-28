@@ -1,5 +1,5 @@
 {
-  "FilePath": "c:\\Users\\44337427830\\Desktop\\MVC\\MCBonaldsMVC\\McBonaldsMVC.csproj",
+  "FilePath": "c:\\Users\\44337427830\\Desktop\\MVC\\MCBonaldsMVC\\MCBonaldsMVC.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-2.1",
     "LanguageVersion": "2.1",
@@ -2958,7 +2958,7 @@
     ],
     "CSharpLanguageVersion": 703
   },
-  "RootNamespace": "McBonaldsMVC",
+  "RootNamespace": "MCBonaldsMVC",
   "Documents": [
     {
       "FilePath": "c:\\Users\\44337427830\\Desktop\\MVC\\MCBonaldsMVC\\Views\\Pedidos\\index.cshtml",
@@ -2983,6 +2983,11 @@
     {
       "FilePath": "c:\\Users\\44337427830\\Desktop\\MVC\\MCBonaldsMVC\\Views\\Cliente\\Historico.cshtml",
       "TargetPath": "Views\\Cliente\\Historico.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\44337427830\\Desktop\\MVC\\MCBonaldsMVC\\Views\\Administrador\\Dashboard.cshtml",
+      "TargetPath": "Views\\Administrador\\Dashboard.cshtml",
       "FileKind": "mvc"
     },
     {
