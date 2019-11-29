@@ -2,6 +2,7 @@ using System;
 using McBonaldsMVC.Models;
 using McBonaldsMVC.Repositories;
 using McBonaldsMVC.ViewModels;
+using MCBonaldsMVC.Enums;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -80,6 +81,47 @@ namespace McBonaldsMVC.Controllers
                 });
             } else {
                 return View ("Erro", new RespostaViewModel("Mensagem"));
+            }
+        }
+
+        public IActionResult Aprovar(ulong id)
+        {
+            var pedido = pedidoRepository.ObterPor(id);
+
+            pedido.Status = (uint)StatusPedido.APROVADO;
+
+            if (pedidoRepository.Atualizar(pedido))
+            {
+                return RedirectToAction("Dashboard", "Administrador");
+            } 
+            else 
+            {
+                return View("Erro", new RespostaViewModel("Não foi Possível aprovar")
+                {
+                    NomeView = "Dashboard",
+                    UsuarioEmail = ObterUsuarioSession(),
+                    UsuarioNome = ObterUsuarioNomeSession()
+                });
+            }
+        }
+        public IActionResult Reprovar(ulong id)
+        {
+            var pedido = pedidoRepository.ObterPor(id);
+
+            pedido.Status = (uint)StatusPedido.REPROVADO;
+
+            if (pedidoRepository.Atualizar(pedido))
+            {
+                return RedirectToAction("Dashboard", "Administrador");
+            } 
+            else 
+            {
+                return View("Erro", new RespostaViewModel("Não foi Possível aprovar")
+                {
+                    NomeView = "Dashboard",
+                    UsuarioEmail = ObterUsuarioSession(),
+                    UsuarioNome = ObterUsuarioNomeSession()
+                });
             }
         }
     }

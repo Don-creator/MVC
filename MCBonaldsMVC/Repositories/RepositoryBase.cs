@@ -1,3 +1,5 @@
+using McBonaldsMVC.Models;
+
 namespace McBonaldsMVC.Repositories
 {
     public class RepositoryBase
