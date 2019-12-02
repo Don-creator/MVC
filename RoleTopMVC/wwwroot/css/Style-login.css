@@ -3,7 +3,6 @@
     padding:0%;
     
     text-align: center;
-
 }
 
 body {
@@ -45,13 +44,14 @@ nav ul li {
 /*-----------------Fim-----------------------*/
 
 footer{
-     font-size: 1.5em;
-     color: #fff;
-     background-color: #9c00ff;
-     margin-top:  23%;
+    font-size: 1.5em;
+    color: #fff;
+    background-color: #9c00ff;
+    margin-top:  23%;
 }
 
 .Logo {
     align-items: center;
 }
+
 

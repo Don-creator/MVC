@@ -3004,11 +3004,6 @@
       "FilePath": "c:\\Users\\44337427830\\Desktop\\MVC\\RoleTopMVC\\Views\\Home\\Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
       "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\44337427830\\Desktop\\MVC\\RoleTopMVC\\Views\\Cliente\\Login.cshtml",
-      "TargetPath": "Views\\Cliente\\Login.cshtml",
-      "FileKind": "mvc"
     }
   ],
   "SerializationFormat": "0.2"

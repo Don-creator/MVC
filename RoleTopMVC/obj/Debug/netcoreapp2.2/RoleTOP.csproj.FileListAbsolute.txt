@@ -45,7 +45,6 @@ C:\Users\44337427830\Desktop\MVC\RoleTopMVC\obj\Debug\netcoreapp2.2\RoleTOP.Asse
 C:\Users\44337427830\Desktop\MVC\RoleTopMVC\obj\Debug\netcoreapp2.2\RoleTOP.TagHelpers.input.cache
 C:\Users\44337427830\Desktop\MVC\RoleTopMVC\obj\Debug\netcoreapp2.2\RoleTOP.TagHelpers.output.cache
 C:\Users\44337427830\Desktop\MVC\RoleTopMVC\obj\Debug\netcoreapp2.2\RoleTOP.RazorCoreGenerate.cache
-C:\Users\44337427830\Desktop\MVC\RoleTopMVC\obj\Debug\netcoreapp2.2\Razor\Views\Cliente\Login.g.cshtml.cs
 C:\Users\44337427830\Desktop\MVC\RoleTopMVC\obj\Debug\netcoreapp2.2\Razor\Views\Home\Index.g.cshtml.cs
 C:\Users\44337427830\Desktop\MVC\RoleTopMVC\obj\Debug\netcoreapp2.2\Razor\Views\Home\Privacy.g.cshtml.cs
 C:\Users\44337427830\Desktop\MVC\RoleTopMVC\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Error.g.cshtml.cs
@@ -60,3 +59,4 @@ C:\Users\44337427830\Desktop\MVC\RoleTopMVC\obj\Debug\netcoreapp2.2\RoleTOP.View
 C:\Users\44337427830\Desktop\MVC\RoleTopMVC\obj\Debug\netcoreapp2.2\RoleTOP.dll
 C:\Users\44337427830\Desktop\MVC\RoleTopMVC\obj\Debug\netcoreapp2.2\RoleTOP.pdb
 C:\Users\44337427830\Desktop\MVC\RoleTopMVC\obj\Debug\netcoreapp2.2\RoleTOP.csproj.CopyComplete
+C:\Users\44337427830\Desktop\MVC\RoleTopMVC\obj\Debug\netcoreapp2.2\Razor\Views\Login\Login.g.cshtml.cs

@@ -6,6 +6,7 @@ namespace RoleTopMVC.Controllers
     {
         public IActionResult Login()
         {
+            ViewData["Action"] = "Login";
             return View();
         }
     }
