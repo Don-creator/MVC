@@ -1,8 +1,8 @@
+using RoleTopMVC.Enums;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace RoleTopMVC.Controllers
-{
+namespace RoleTopMVC.Controllers {
     public class AbstractController : Controller {
         protected const string SESSION_CLIENTE_EMAIL = "email_cliente";
         protected const string SESSION_CLIENTE_NOME = "nome_cliente";

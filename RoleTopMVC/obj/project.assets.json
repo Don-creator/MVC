@@ -12083,9 +12083,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\44337427830\\Desktop\\MVC\\RoleTopMVC\\RoleTOP.csproj",
-      "projectName": "RoleTOP",
-      "projectPath": "C:\\Users\\44337427830\\Desktop\\MVC\\RoleTopMVC\\RoleTOP.csproj",
+      "projectUniqueName": "C:\\Users\\44337427830\\Desktop\\MVC\\RoleTopMVC\\NewRolêTOP.csproj",
+      "projectName": "NewRolêTOP",
+      "projectPath": "C:\\Users\\44337427830\\Desktop\\MVC\\RoleTopMVC\\NewRolêTOP.csproj",
       "packagesPath": "C:\\Users\\44337427830\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\44337427830\\Desktop\\MVC\\RoleTopMVC\\obj\\",
       "projectStyle": "PackageReference",

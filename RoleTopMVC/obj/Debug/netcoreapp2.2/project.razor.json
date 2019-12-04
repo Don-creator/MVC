@@ -1,5 +1,5 @@
 {
-  "FilePath": "c:\\Users\\44337427830\\Desktop\\MVC\\RoleTopMVC\\RoleTOP.csproj",
+  "FilePath": "c:\\Users\\44337427830\\Desktop\\MVC\\RoleTopMVC\\NewRolêTOP.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-2.1",
     "LanguageVersion": "2.1",
@@ -2958,7 +2958,7 @@
     ],
     "CSharpLanguageVersion": 703
   },
-  "RootNamespace": "RoleTOP",
+  "RootNamespace": "NewRolêTOP",
   "Documents": [
     {
       "FilePath": "c:\\Users\\44337427830\\Desktop\\MVC\\RoleTopMVC\\Views\\Home\\Privacy.cshtml",
@@ -2968,6 +2968,11 @@
     {
       "FilePath": "c:\\Users\\44337427830\\Desktop\\MVC\\RoleTopMVC\\Views\\_ViewImports.cshtml",
       "TargetPath": "Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\44337427830\\Desktop\\MVC\\RoleTopMVC\\Views\\Shared\\Sucesso.cshtml",
+      "TargetPath": "Views\\Shared\\Sucesso.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -2981,13 +2986,28 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\44337427830\\Desktop\\MVC\\RoleTopMVC\\Views\\Administrador\\Dashboard.cshtml",
+      "TargetPath": "Views\\Administrador\\Dashboard.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\44337427830\\Desktop\\MVC\\RoleTopMVC\\Views\\Cliente\\Historico.cshtml",
+      "TargetPath": "Views\\Cliente\\Historico.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\44337427830\\Desktop\\MVC\\RoleTopMVC\\Views\\Shared\\_HeaderHomePage.cshtml",
+      "TargetPath": "Views\\Shared\\_HeaderHomePage.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\44337427830\\Desktop\\MVC\\RoleTopMVC\\Views\\Shared\\_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\44337427830\\Desktop\\MVC\\RoleTopMVC\\Views\\Login\\Login.cshtml",
-      "TargetPath": "Views\\Login\\Login.cshtml",
+      "FilePath": "c:\\Users\\44337427830\\Desktop\\MVC\\RoleTopMVC\\Views\\Shared\\Erro.cshtml",
+      "TargetPath": "Views\\Shared\\Erro.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -3001,8 +3021,28 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\44337427830\\Desktop\\MVC\\RoleTopMVC\\Views\\Pedido\\Index.cshtml",
+      "TargetPath": "Views\\Pedido\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\44337427830\\Desktop\\MVC\\RoleTopMVC\\Views\\Pedidos\\index.cshtml",
+      "TargetPath": "Views\\Pedidos\\index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\44337427830\\Desktop\\MVC\\RoleTopMVC\\Views\\Home\\Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\44337427830\\Desktop\\MVC\\RoleTopMVC\\Views\\Cadastro\\Index.cshtml",
+      "TargetPath": "Views\\Cadastro\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\44337427830\\Desktop\\MVC\\RoleTopMVC\\Views\\Cliente\\Login.cshtml",
+      "TargetPath": "Views\\Cliente\\Login.cshtml",
       "FileKind": "mvc"
     }
   ],

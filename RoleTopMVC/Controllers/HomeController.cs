@@ -1,18 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Diagnostics;
+using RoleTopMVC.Models;
 using Microsoft.AspNetCore.Mvc;
-using RoleTOP.Models;
 using RoleTopMVC.ViewModels;
 
-namespace RoleTOP.Controllers
+namespace RoleTopMVC.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : AbstractController
     {
         public IActionResult Index()
-        {   ViewData["Action"] = "Home";
+        {
             return View(new BaseViewModel()
             {
                 NomeView = "Home",
@@ -25,7 +21,11 @@ namespace RoleTOP.Controllers
         {
             return View();
         }
+
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        public IActionResult Error()
+        {
+            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
     }
 }
-
-
