@@ -1,0 +1,11 @@
+.section-container  {
+    background-color: #9c00ff;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 3.0em;  
+    text-decoration: none;
+    color: #fff;
+    -webkit-text-stroke-width: 0.06em;
+    -webkit-text-stroke-color: black;
+}

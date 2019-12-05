@@ -3026,6 +3026,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\44337427830\\Desktop\\MVC\\RoleTopMVC\\Views\\Shared\\_NavLogin.cshtml",
+      "TargetPath": "Views\\Shared\\_NavLogin.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\44337427830\\Desktop\\MVC\\RoleTopMVC\\Views\\Pedidos\\index.cshtml",
       "TargetPath": "Views\\Pedidos\\index.cshtml",
       "FileKind": "mvc"
@@ -3033,6 +3038,16 @@
     {
       "FilePath": "c:\\Users\\44337427830\\Desktop\\MVC\\RoleTopMVC\\Views\\Home\\Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\44337427830\\Desktop\\MVC\\RoleTopMVC\\Views\\Shared\\_NavHome.cshtml",
+      "TargetPath": "Views\\Shared\\_NavHome.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\44337427830\\Desktop\\MVC\\RoleTopMVC\\Views\\Shared\\_Footer.cshtml",
+      "TargetPath": "Views\\Shared\\_Footer.cshtml",
       "FileKind": "mvc"
     },
     {

@@ -8,7 +8,9 @@ namespace RoleTopMVC.Controllers
     public class HomeController : AbstractController
     {
         public IActionResult Index()
-        {
+        {   
+            ViewData ["Footer"] = "Footer";
+            ViewData["navHome"] = "Home";
             return View(new BaseViewModel()
             {
                 NomeView = "Home",

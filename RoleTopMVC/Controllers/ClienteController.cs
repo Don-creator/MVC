@@ -13,8 +13,10 @@ namespace RoleTopMVC.Controllers
 
         [HttpGet]
         public IActionResult Login () {
+            
+            ViewData ["NavView"] = "NavView";
             return View (new BaseViewModel () {
-                NomeView = "Login",
+                    NomeView = "Login",
                     UsuarioEmail = ObterUsuarioSession (),
                     UsuarioNome = ObterUsuarioNomeSession ()
             });
