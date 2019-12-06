@@ -13,6 +13,7 @@ namespace RoleTopMVC.Controllers
         ClienteRepository clienteRepositorio = new ClienteRepository ();
 
         public IActionResult Index () {
+            ViewData ["navCadastro"] = "Cadastro";
             return View (new BaseViewModel () {
                 NomeView = "Cadastro",
                     UsuarioEmail = ObterUsuarioSession (),
@@ -35,8 +36,9 @@ namespace RoleTopMVC.Controllers
                 cliente.TipoUsuario = (uint) TipoUsuario.CLIENTE;
                 clienteRepositorio.Inserir (cliente);
 
+                
                 return View ("Sucesso", new RespostaViewModel () {
-                    NomeView = "Cadastro",
+                        NomeView = "Cadastro",
                         UsuarioEmail = ObterUsuarioSession (),
                         UsuarioNome = ObterUsuarioNomeSession ()
                 });

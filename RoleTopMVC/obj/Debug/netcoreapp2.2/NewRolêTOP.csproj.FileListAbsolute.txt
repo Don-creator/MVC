@@ -70,3 +70,4 @@ C:\Users\44337427830\Desktop\MVC\RoleTopMVC\obj\Debug\netcoreapp2.2\Razor\Views\
 C:\Users\44337427830\Desktop\MVC\RoleTopMVC\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_NavLogin.g.cshtml.cs
 C:\Users\44337427830\Desktop\MVC\RoleTopMVC\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_NavHome.g.cshtml.cs
 C:\Users\44337427830\Desktop\MVC\RoleTopMVC\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_Footer.g.cshtml.cs
+C:\Users\44337427830\Desktop\MVC\RoleTopMVC\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_NavCadastro.g.cshtml.cs

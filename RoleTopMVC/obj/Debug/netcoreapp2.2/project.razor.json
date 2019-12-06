@@ -2966,6 +2966,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\44337427830\\Desktop\\MVC\\RoleTopMVC\\Views\\Shared\\_NavCadastro.cshtml",
+      "TargetPath": "Views\\Shared\\_NavCadastro.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\44337427830\\Desktop\\MVC\\RoleTopMVC\\Views\\_ViewImports.cshtml",
       "TargetPath": "Views\\_ViewImports.cshtml",
       "FileKind": "mvc"
@@ -2973,6 +2978,11 @@
     {
       "FilePath": "c:\\Users\\44337427830\\Desktop\\MVC\\RoleTopMVC\\Views\\Shared\\Sucesso.cshtml",
       "TargetPath": "Views\\Shared\\Sucesso.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\44337427830\\Desktop\\MVC\\RoleTopMVC\\Views\\Shared\\_NavSucesso.cshtml",
+      "TargetPath": "Views\\Shared\\_NavSucesso.cshtml",
       "FileKind": "mvc"
     },
     {

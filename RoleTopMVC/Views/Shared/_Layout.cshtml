@@ -4,6 +4,7 @@
     var navView = (string) ViewData["NavView"];
     var navHome = (string) ViewData["NavHome"];
     var Footer = (string) ViewData["Footer"];
+    var navCadastro = (string) ViewData["NavCadastro"];
 }
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -14,6 +15,12 @@
     <title>Rolê TOP</title>
 </head>
     <body>
+        @if("Cadastro".Equals(navCadastro))
+        {
+            Html.RenderPartial("_NavCadastro");
+            <link rel = "stylesheet" href="~/CSS/Style-login.css" type="text/css">
+
+        }
         @if("Home".Equals(@Model.NomeView))
         {
             Html.RenderPartial("_NavHome");
