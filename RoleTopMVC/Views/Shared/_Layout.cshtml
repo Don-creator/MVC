@@ -5,6 +5,7 @@
     var navHome = (string) ViewData["NavHome"];
     var Footer = (string) ViewData["Footer"];
     var navCadastro = (string) ViewData["NavCadastro"];
+    var navDeuBom = (string) ViewData["NavDeuBom"];
 }
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -31,6 +32,11 @@
         {
             Html.RenderPartial("_NavLogin");
             <link rel="stylesheet" href="~/CSS/Style-login.css" type="text/css">
+        }
+        @if("NavDeuBom".Equals(navDeuBom))
+        {
+            Html.RenderPartial("_NavDeuBom");
+            <link rel = "stylesheet" href="~/CSS/Style-login.css" type="text/css">
         }
         <div id = "Logo">
             <img src="~/IMG/LogoTOP.png" alt="Logo TOP" title="LogoTipo" width="520px" height="420">

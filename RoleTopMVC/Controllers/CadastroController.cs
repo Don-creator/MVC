@@ -23,6 +23,7 @@ namespace RoleTopMVC.Controllers
 
         public IActionResult CadastrarCliente (IFormCollection form) {
             ViewData["Action"] = "Cadastro";
+            ViewData["navDeuBom"]="NavDeuBom";
             try {
                 Cliente cliente = new Cliente (
                     form["nome"],
@@ -36,7 +37,7 @@ namespace RoleTopMVC.Controllers
                 cliente.TipoUsuario = (uint) TipoUsuario.CLIENTE;
                 clienteRepositorio.Inserir (cliente);
 
-                
+
                 return View ("Sucesso", new RespostaViewModel () {
                         NomeView = "Cadastro",
                         UsuarioEmail = ObterUsuarioSession (),
