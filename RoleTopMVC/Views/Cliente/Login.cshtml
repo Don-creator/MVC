@@ -1,23 +1,22 @@
 <main>
     <body>
-        <div style="padding-top:2em;">
+    <form method="POST" action='@Url.Action("Login", "Cliente")'>
+            <div style="padding-top:2em;">
 
-        </div>
-        <div class="Login">
-            <label for="email">E-mail</label>
-            <br/>
-            <input id="email" type="text" placeholder="">
-            <br>
-            <label for="senha">Senha</label>
-            <br/>
-            <input id="senha" type="password" placeholder="">
-            <br>
-            <a href="index.html">
+            </div>
+            <div class="Login">
+                <label for="email">E-mail</label>
+                <br/>
+                <input id="email" type="text" placeholder="" name="Email">
+                <br>
+                <label for="senha">Senha</label>
+                <br/>
+                <input id="senha" type="password" placeholder="" name="Senha">
+                <br>
                 <div style="padding-top:1em;">
-
-        </div>
-                <input type="submit" value="Entrar">
-            </a>
-        </div>
+                </div>
+                <input type="submit" value="Entrar" >
+            </div>
+        </form>
     </body>
 </main>

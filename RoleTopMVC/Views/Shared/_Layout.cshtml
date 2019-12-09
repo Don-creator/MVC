@@ -2,7 +2,9 @@
 
 @{
     var navView = (string) ViewData["NavView"];
+    var navErro = (string) ViewData["NavErro"];
     var navHome = (string) ViewData["NavHome"];
+    var navDash = (string) ViewData["NavDash"];
     var Footer = (string) ViewData["Footer"];
     var navCadastro = (string) ViewData["NavCadastro"];
     var navDeuBom = (string) ViewData["NavDeuBom"];
@@ -35,12 +37,23 @@
         }
         @if("NavDeuBom".Equals(navDeuBom))
         {
-            Html.RenderPartial("_NavDeuBom");
+            Html.RenderPartial("_NavSucesso");
             <link rel = "stylesheet" href="~/CSS/Style-login.css" type="text/css">
+        }
+        @if("Erro".Equals(navErro))
+        {
+            Html.RenderPartial("_NavErro");
+            <link rel = "stylesheet" href="~/CSS/Style-Erro.css" type="text/css">
+        }
+        @if("Dash".Equals(navDash))
+        {
+            Html.RenderPartial("_NavDash");
+            <link rel = "stylesheet" href="~/CSS/Style-Dash.css" type="text/css">
         }
         <div id = "Logo">
             <img src="~/IMG/LogoTOP.png" alt="Logo TOP" title="LogoTipo" width="520px" height="420">
         </div>
+
 
         @RenderBody()
 

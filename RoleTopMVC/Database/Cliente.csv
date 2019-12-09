@@ -1,8 +1,2 @@
-tipo_usuario=0;nome=Adminstrador;email=admin@email.com;senha=123123;endereco=;telefone=;data_nascimento=17/06/2002 00:00:00
-tipo_usuario=1;nome=Math;email=math@email.com;senha=123123;endereco=Disney;telefone=1197842454;data_nascimento=16/02/2003 00:00:00
-tipo_usuario1;nome=Adminstrador;email=admin@email.com;senha=123123;endereco=Disney;telefone=1197842454;data_nascimento=17/06/2002 00:00:00
-tipo_usuario1;nome=Math;email=math@email.com;senha=123123;endereco=Disney;telefone=1197842454;data_nascimento=17/01/2005 00:00:00
-tipo_usuario1;nome=Math;email=math@email.com;senha=;endereco=Disney;telefone=1197842454;data_nascimento=28/06/2006 00:00:00
-tipo_usuario1;nome=Erick;email=erick@email.com;senha=123123;endereco=Disney;telefone=1197842454;data_nascimento=17/08/2006 00:00:00
-tipo_usuario1;nome=Erick;email=erick@email.com;senha=123123;endereco=Disney;telefone=1197842454;data_nascimento=17/08/2006 00:00:00
-tipo_usuario1;nome=Adminstrador;email=admin@email.com;senha=123123;endereco=Disney;telefone=1197842454;data_nascimento=17/06/2002 00:00:00
+tipo_usuario=1;nome=Adminstrador;email=admin@email.com;senha=123123;endereco=Disney;telefone=1197842454;data_nascimento=17/01/2001 00:00:00
+tipo_usuario=1;nome=Erick;email=erick@email.com;senha=1;endereco=Disney;telefone=1197842454;data_nascimento=17/06/2002 00:00:00

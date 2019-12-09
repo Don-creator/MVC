@@ -37,7 +37,7 @@ namespace RoleTopMVC.Controllers
             } else {
                 return View ("Erro", new RespostaViewModel () {
                     NomeView = "Dashboard",
-                        Mensagem = "Você não tem permissão para acessar o Dashboard"
+                    Mensagem = "Você não tem permissão para acessar o Dashboard"
                 });
             }
         }

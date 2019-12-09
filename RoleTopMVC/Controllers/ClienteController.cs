@@ -63,7 +63,7 @@ namespace RoleTopMVC.Controllers
                 System.Console.WriteLine ("====================");
                 System.Console.WriteLine (e.StackTrace);
                 System.Console.WriteLine ("====================");
-                return View ("Erro");
+                return View ("Erro", new RespostaViewModel("Erro"));
             }
         }
 

@@ -1,4 +1,7 @@
 @model RoleTopMVC.ViewModels.RespostaViewModel
+@{
+    ViewData["navErro"] = "Erro";
+}
 <main>
     <h2>@ViewData["Action"] deu ruim!</h2>
     <p>@Model.Mensagem</p>
