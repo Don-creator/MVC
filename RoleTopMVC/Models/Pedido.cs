@@ -3,7 +3,7 @@ using RoleTopMVC.Enums;
 
 namespace RoleTopMVC.Models
 {
-    public class Pedido
+    public class Servicos
     {
         public ulong Id {get;set;}
         public Cliente Cliente {get;set;}
@@ -13,7 +13,7 @@ namespace RoleTopMVC.Models
         public double PrecoTotal {get;set;}
         public uint Status {get;set;}  
 
-        public Pedido()
+        public Servicos()
         {
             this.Cliente = new Cliente();
             this.Hamburguer = new Hamburguer();

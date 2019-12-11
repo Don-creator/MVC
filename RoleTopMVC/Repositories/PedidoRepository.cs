@@ -6,14 +6,14 @@ using RoleTopMVC.Repositories;
 
 namespace RoleTopMVC.Repositories {
     public class PedidoRepository : RepositoryBase {
-        private const string PATH = "Database/Pedido.csv";
+        private const string PATH = "Database/Servicos.csv";
         public PedidoRepository () {
             if (!File.Exists (PATH)) {
                 File.Create (PATH).Close ();
             }
 
         }
-        public bool Inserir (Pedido pedido) {
+        public bool Inserir (Servicos pedido) {
             var quantidadePedidos = File.ReadAllLines (PATH).Length; //Tradução PATH: Caminho - Para mostra o caminho do arquivo e Length: Para pegar o tamanho do Vetor
             pedido.Id = (ulong) ++quantidadePedidos;
             var linha = new string[] { PrepararPedidoCSV (pedido) };
@@ -22,9 +22,9 @@ namespace RoleTopMVC.Repositories {
             return true;
         }
 
-        public List<Pedido> ObterTodosPorCliente (string emailCliente) {
+        public List<Servicos> ObterTodosPorCliente (string emailCliente) {
             var pedidos = ObterTodos ();
-            List<Pedido> pedidoCliente = new List<Pedido> ();
+            List<Servicos> pedidoCliente = new List<Servicos> ();
 
             foreach (var pedido in pedidos) {
                 if (pedido.Cliente.Email.Equals (emailCliente)) {
@@ -34,11 +34,11 @@ namespace RoleTopMVC.Repositories {
             return pedidoCliente;
         }
 
-        public List<Pedido> ObterTodos () {
+        public List<Servicos> ObterTodos () {
             var linhas = File.ReadAllLines (PATH);
-            List<Pedido> pedidos = new List<Pedido> ();
+            List<Servicos> pedidos = new List<Servicos> ();
             foreach (var linha in linhas) {
-                Pedido pedido = new Pedido ();
+                Servicos pedido = new Servicos ();
                 // Cliente c = new Cliente ();
 
                 pedido.Id = ulong.Parse (ExtrairValorDoCampo ("id", linha));
@@ -57,7 +57,7 @@ namespace RoleTopMVC.Repositories {
             }
             return pedidos;
         }
-        public Pedido ObterPor(ulong id)
+        public Servicos ObterPor(ulong id)
         {
             var pedidosTotais = ObterTodos();
             foreach (var pedido in pedidosTotais)
@@ -70,7 +70,7 @@ namespace RoleTopMVC.Repositories {
             return null;
         }
 
-        public bool Atualizar(Pedido pedido)
+        public bool Atualizar(Servicos pedido)
         {
             var pedidosTotais = File.ReadAllLines(PATH);
             var pedidosCSV = PrepararPedidoCSV(pedido);
@@ -112,7 +112,7 @@ namespace RoleTopMVC.Repositories {
             return valor.Replace (nomeCampo + "=", " ");
         }
 
-        private string PrepararPedidoCSV (Pedido pedido) {
+        private string PrepararPedidoCSV (Servicos pedido) {
             Cliente c = pedido.Cliente;
             Hamburguer h = pedido.Hamburguer;
             Shake s = pedido.Shake;

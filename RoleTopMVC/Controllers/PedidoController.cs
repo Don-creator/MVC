@@ -40,8 +40,8 @@ namespace RoleTopMVC.Controllers
 
         public IActionResult Registrar(IFormCollection form)
         {
-            ViewData["Action"] = "Pedido";
-            Pedido pedido = new Pedido();
+            ViewData["Action"] = "Servicos";
+            Servicos pedido = new Servicos();
             
             Shake shake = new Shake();
             var nomeShake = form["shake"];
@@ -75,7 +75,7 @@ namespace RoleTopMVC.Controllers
             {
                 return View("Sucesso", new RespostaViewModel()
                 {
-                    NomeView = "Pedido",
+                    NomeView = "Servicos",
                     UsuarioEmail = ObterUsuarioSession(),
                     UsuarioNome = ObterUsuarioNomeSession()
                 });
